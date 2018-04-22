@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @Setter
@@ -26,4 +28,5 @@ public class PlayerProject {
     private float size = 0.0f;
     private int compileState = 0;
     private int runState = 0;
+    private List<BattleRecord> records = Collections.emptyList();
 }
