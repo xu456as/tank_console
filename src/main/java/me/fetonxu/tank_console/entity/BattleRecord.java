@@ -16,7 +16,7 @@ public class BattleRecord {
 
     private PlayerProject enemy;
     private BattleLog log;
-    private int winner = 0;
-    private Date date = new Date();
+    private Integer winner = 0;
+    private Long date = System.currentTimeMillis();
 
 }

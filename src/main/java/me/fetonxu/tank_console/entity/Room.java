@@ -11,12 +11,12 @@ import java.util.Date;
 @Getter
 public class Room {
 
-    private long id = -1;
+    private Long id = -1l;
     private User user;
     private BattleMap map;
-    private int maxChallengers = 0;
-    private int minChallengers = 0;
-    private Date date = new Date();
-    private long duration = 0;
+    private Integer maxChallengers = 0;
+    private Integer minChallengers = 0;
+    private Long date = System.currentTimeMillis();
+    private Long duration = 0l;
 
 }

@@ -18,15 +18,15 @@ public class PlayerProject {
     public final static int RUN_STATE_PASS = 1;
     public final static int RUN_STATE_FAIL = 2;
 
-    private long id = -1;
+    private Long id = -1l;
     private User user;
     private String name;
     private String url;
     private String compressType;
     private String language;
-    private Date date = new Date();
-    private float size = 0.0f;
-    private int compileState = 0;
-    private int runState = 0;
+    private Long date = System.currentTimeMillis();
+    private Float size = 0.0f;
+    private Integer compileState = 0;
+    private Integer runState = 0;
     private List<BattleRecord> records = Collections.emptyList();
 }

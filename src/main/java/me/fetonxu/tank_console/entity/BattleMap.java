@@ -10,11 +10,11 @@ import java.util.Date;
 @Getter
 @Setter
 public class BattleMap {
-    private long id = -1;
+    private Long id = -1l;
     private String name;
     private String url;
-    private Date date = new Date();
+    private Long date = System.currentTimeMillis();
     private User user;
-    private int winScore = 0;
-    private int loseScore = 0;
+    private Integer winScore = 0;
+    private Integer loseScore = 0;
 }

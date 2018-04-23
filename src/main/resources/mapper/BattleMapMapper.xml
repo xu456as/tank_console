@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="me.fetonxu.tank_console.mapper.BattleMapMapper">
+
+    <insert id="save" parameterType="BattleMap">
+        INSERT INTO map (user_id, name, url, date, win_score, lose_score)
+        VALUES (#{user.id}, #{name}, #{url}, #{date}, #{winScore}, #{loseScore});
+    </insert>
+    <update id="update" parameterType="BattleMap">
+        UPDATE map
+        <set>
+            <if test="name != null">name=#{name},</if>
+            <if test="url != null">url=#{url},</if>
+            <if test="date != null">date=#{date},</if>
+            <if test="winScore != null">win_score=#{winScore},</if>
+            <if test="loseScore != null">reason=#{loseScore}</if>
+        </set>
+        WHERE id = #{id};
+    </update>
+    <select id="findById" parameterType="long" resultMap="mapMap">
+        SELECT *
+        FROM map
+        WHERE id = #{mapId};
+    </select>
+
+    <select id="findAll" resultMap="mapMap">
+        SELECT *
+        FROM map;
+    </select>
+
+    <resultMap id="mapMap" type="BattleMap">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="url" column="url"/>
+        <result property="date" column="date"/>
+        <result property="winScore" column="win_score"/>
+        <result property="loseScore" column="lose_score"/>
+        <association property="user" column="user_id" javaType="User">
+            <id property="id" column="user_id"/>
+            <result property="email" column="user_email"/>
+            <result property="password" column="user_password"/>
+            <result property="type" column="user_type"/>
+            <result property="phone" column="user_phone"/>
+            <result property="score" column="user_score"/>
+        </association>
+    </resultMap>
+</mapper>

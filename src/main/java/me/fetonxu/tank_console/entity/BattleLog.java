@@ -18,9 +18,9 @@ public class BattleLog {
     private PlayerProject projectA;
     private PlayerProject projectB;
     private BattleMap map;
-    private int winner = 0;
+    private Integer winner = 0;
     private String url;
     private String compressType;
-    private float size = 0f;
-    private Date date = new Date();
+    private Float size = 0f;
+    private Long date = System.currentTimeMillis();
 }
