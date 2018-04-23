@@ -21,15 +21,15 @@
     <update id="update" parameterType="PlayerProject">
         UPDATE project
         <set>
-            <if test="name != null">name=#{name},</if>
-            <if test="url != null">url=#{url},</if>
-            <if test="compressType != null">compress=#{compressType},</if>
-            <if test="language != null">language=#{language},</if>
-            <if test="date != null">date=#{date},</if>
-            <if test="size != null">size=#{size},</if>
-            <if test="compileState != null">compile_state=#{compileState},</if>
-            <if test="runState != null">run_state=#{runState},</if>
-            <if test="random != null">random=#{random}</if>
+            <if test="name != null">name=#{project.name},</if>
+            <if test="url != null">url=#{project.url},</if>
+            <if test="compressType != null">compress=#{project.compressType},</if>
+            <if test="language != null">language=#{project.language},</if>
+            <if test="date != null">date=#{project.date},</if>
+            <if test="size != null">size=#{project.size},</if>
+            <if test="compileState != null">compile_state=#{project.compileState},</if>
+            <if test="runState != null">run_state=#{project.runState},</if>
+            <if test="random != null">random=#{project.random}</if>
         </set>
         WHERE id=#{project.id};
     </update>

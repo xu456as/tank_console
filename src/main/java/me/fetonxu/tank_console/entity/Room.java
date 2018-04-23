@@ -16,7 +16,7 @@ public class Room {
     private BattleMap map;
     private Integer maxChallengers = 0;
     private Integer minChallengers = 0;
-    private Long date = System.currentTimeMillis();
+    private Long startTime = System.currentTimeMillis();
     private Long duration = 0l;
 
 }

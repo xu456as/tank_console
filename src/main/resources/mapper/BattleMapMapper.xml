@@ -12,11 +12,11 @@
     <update id="update" parameterType="BattleMap">
         UPDATE map
         <set>
-            <if test="name != null">name=#{name},</if>
-            <if test="url != null">url=#{url},</if>
-            <if test="date != null">date=#{date},</if>
-            <if test="winScore != null">win_score=#{winScore},</if>
-            <if test="loseScore != null">reason=#{loseScore}</if>
+            <if test="name != null">name=#{map.name},</if>
+            <if test="url != null">url=#{map.url},</if>
+            <if test="date != null">date=#{map.date},</if>
+            <if test="winScore != null">win_score=#{map.winScore},</if>
+            <if test="loseScore != null">reason=#{map.loseScore}</if>
         </set>
         WHERE id = #{id};
     </update>

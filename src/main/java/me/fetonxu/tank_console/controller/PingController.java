@@ -32,6 +32,7 @@ import java.util.List;
         User user = (User)session.getAttribute("user");
         if(user == null){
             session.setAttribute("user", new User());
+            System.out.println("no user");
         }
         else {
             System.out.println(user.getId());
