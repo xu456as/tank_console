@@ -12,7 +12,7 @@ import java.util.Date;
 public class Room {
 
     private Long id = -1l;
-    private User user;
+    private PlayerProject project;
     private BattleMap map;
     private Integer maxChallengers = 0;
     private Integer minChallengers = 0;

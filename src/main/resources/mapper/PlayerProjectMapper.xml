@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        <!--void update(PlayerProject project);-->
+        <!--void save(PlayerProject project);-->
+        <!--List<PlayerProject> findAll();-->
+    <!--PlayerProject findById(Long projectId);-->
+<mapper namespace="me.fetonxu.tank_console.mapper.PlayerProjectMapper">
+    <insert id="save" parameterType="PlayerProject">
+        INSERT INTO project(user_id, name, url, compress,
+                            language, date, size, compile_state,
+                            run_state, random)
+                VALUES (#{project.user.id}, #{project.name},
+                        #{project.url}, #{project.compressType},
+                        #{project.language}, #{project.date},
+                        #{project.size}, #{project.compileState},
+                        #{project.runState}, #{project.random}
+                );
+    </insert>
+    <update id="update" parameterType="PlayerProject">
+        UPDATE project
+        <set>
+            <if test="name != null">name=#{name},</if>
+            <if test="url != null">url=#{url},</if>
+            <if test="compressType != null">compress=#{compressType},</if>
+            <if test="language != null">language=#{language},</if>
+            <if test="date != null">date=#{date},</if>
+            <if test="size != null">size=#{size},</if>
+            <if test="compileState != null">compile_state=#{compileState},</if>
+            <if test="runState != null">run_state=#{runState},</if>
+            <if test="random != null">random=#{random}</if>
+        </set>
+        WHERE id=#{project.id};
+    </update>
+    <select id="findById" parameterType="long" resultMap="projectMap" >
+      SELECT * from project WHERE id=#{project_id};
+    </select>
+    <select id="findAll" resultMap="projectMap" >
+        SELECT * from project;
+    </select>
+
+    <resultMap id="projectMap" type="PlayerProject">
+        <id property="id" column="id" />
+        <result property="name" column="name"/>
+        <result property="url" column="url"/>
+        <result property="compressType" column="compress"/>
+        <result property="language" column="language"/>
+        <result property="date" column="date"/>
+        <result property="size" column="size"/>
+        <result property="compileState" column="compile_state"/>
+        <result property="runState" column="run_state"/>
+        <result property="random" column="random"/>
+        <association property="user" column="user_id" javaType="User">
+            <id property="id" column="user_id"/>
+            <result property="email" column="user_email"/>
+            <result property="password" column="user_password"/>
+            <result property="type" column="user_type"/>
+            <result property="phone" column="user_phone"/>
+            <result property="score" column="user_score"/>
+        </association>
+    </resultMap>
+</mapper>
+

@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller @RequestMapping("/ping") public class PingController {
 
@@ -25,9 +27,17 @@ import javax.servlet.http.HttpServletResponse;
     private BattleMapMapper battleMapMapper;
 
     @RequestMapping @ResponseBody
-    public Object ping(@RequestParam(required = false, defaultValue = "Success") String value) {
+    public Object ping(@RequestParam(required = false, defaultValue = "Success") String value, HttpSession session) {
 
-        BattleMap map = battleMapMapper.findById(1l);
+        User user = (User)session.getAttribute("user");
+        if(user == null){
+            session.setAttribute("user", new User());
+        }
+        else {
+            System.out.println(user.getId());
+        }
+
+        List<BattleMap> map = battleMapMapper.findAll();
 
 
         JSONObject obj = new JSONObject();
