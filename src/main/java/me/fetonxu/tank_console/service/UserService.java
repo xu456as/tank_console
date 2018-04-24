@@ -18,7 +18,8 @@ public class UserService {
     }
 
     public boolean deleteUser(long userId) {
-        throw new RuntimeException("method not implemented");
+        userMapper.deleteById(userId);
+        return true;
     }
 
     public boolean editUser(User user) {

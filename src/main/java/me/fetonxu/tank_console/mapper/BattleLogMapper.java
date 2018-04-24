@@ -16,4 +16,6 @@ public interface BattleLogMapper {
 
     BattleLog findById(String logId);
 
+    List<BattleLog> findByUserId(Long userId);
+
 }

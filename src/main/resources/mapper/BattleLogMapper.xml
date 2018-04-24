@@ -36,6 +36,13 @@
         SELECT * FROM battle_log;
     </select>
 
+    <!--List<BattleLog> findByUserId(Long userId);-->
+    <select id="findByUserId" parameterType="long" resultMap="logMap">
+        SELECT * FROM battle_log WHERE project_a_id IN
+        (SELECT id from project WHERE user_id = #{userId})
+        OR project_b_id IN (SELECT id from project WHERE user_id = #{userId});
+    </select>
+
     <resultMap id="logMap" type="BattleLog">
         <id property="id" column="id"/>
         <result property="projectAId" column="project_a_id"/>

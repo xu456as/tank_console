@@ -31,6 +31,10 @@
         FROM map;
     </select>
 
+    <delete id="delete" parameterType="long">
+        DELETE FROM map WHERE id = #{mapId};
+    </delete>
+
     <resultMap id="mapMap" type="BattleMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>

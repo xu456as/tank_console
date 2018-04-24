@@ -12,6 +12,8 @@ public interface BattleMapMapper {
 
     void save(BattleMap battleMap);
 
+    void delete(Long mapId);
+
     List<BattleMap> findAll();
 
     BattleMap findById(Long mapId);

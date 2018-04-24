@@ -5,6 +5,8 @@
 <!--void save(@Param("inviterId") Long inviterId, @Param("inviteeId") Long inviteeId, @Param("roomId")Long roomId, @Param("duration")Long duration, @Param("state")Integer state);-->
 <!--void delete(@Param("inviterId")Long inviterId, @Param("inviteeId")Long inviteeId, @Param("roomId")Long roomId);-->
 <!--List<InviteMessage> findByUserId(Long userId);-->
+        <!--void updateWithAction(@Param("inviterId") Long inviterId, @Param("inviteeId") Long inviteeId,-->
+        <!--@Param("roomId") Long roomId, @Param("action")Integer action);-->
 <mapper namespace="me.fetonxu.tank_console.mapper.InviteMapper">
     <insert id="save">
         INSERT INTO invite(inviter_id, invitee_id, room_id, date, duration, state)
@@ -14,6 +16,13 @@
         DELETE FROM invite
         WHERE inviter_id = #{inviterId} and invitee_id = #{inviteeId} and room_id = #{roomId};
     </delete>
+    <update id="updateWithAction">
+        UPDATE invite
+        <set>
+            <if test="action != null">state=#{action}</if>
+        </set>
+        WHERE inviter_id = #{inviterId} AND invitee_id = #{inviteeId} and room_id = #{roomId};
+    </update>
     <select id="findByUserId" parameterType="long">
         SELECT * FROM invite WHERE inviter_id = #{userId};
     </select>

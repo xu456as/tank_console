@@ -15,4 +15,8 @@ public interface UserMapper {
     List<User> findAll();
 
     User findById(Long userId);
+
+    void deleteById(Long userId);
+
+    List<User> findByScoreRank();
 }

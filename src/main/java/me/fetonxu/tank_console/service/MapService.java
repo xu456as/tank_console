@@ -16,9 +16,12 @@ public class MapService {
         battleMapMapper.save(map);
         return true;
     }
+
     public boolean deleteMap (long mapId){
-        throw new RuntimeException("method not implemented");
+        battleMapMapper.delete(mapId);
+        return true;
     }
+
     public List<BattleMap> getMaps(){
         return battleMapMapper.findAll();
     }

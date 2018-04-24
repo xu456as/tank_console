@@ -15,4 +15,12 @@ public interface RoomMapper {
     List<Room> findAll();
 
     Room findById(Long roomId);
+
+    List<Room> findByExpiredTime(long currentTime);
+
+    List<Room> findByUserId(long userId);
+
+    void deleteByIds(List<Long> ids);
+
+
 }

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        <!--void deleteById(Long userId);-->
 <mapper namespace="me.fetonxu.tank_console.mapper.UserMapper">
 
     <insert id="save" parameterType="User">
@@ -26,6 +27,18 @@
     <select id="findAll" resultMap="userMap">
         SELECT * FROM user;
     </select>
+
+    <!--List<User> findByScoreRank();-->
+    <select id="findByScoreRank" resultMap="userMap">
+        SELECT * FROM user
+        ORDER BY score DESC ;
+    </select>
+
+    <delete id="deleteById" parameterType="long">
+        DELETE FROM user
+        WHERE id = #{userId};
+    </delete>
+
 
     <resultMap id="userMap" type="User">
         <id property="id" column="id"/>

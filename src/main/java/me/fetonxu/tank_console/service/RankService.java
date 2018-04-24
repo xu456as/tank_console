@@ -19,7 +19,7 @@ public class RankService {
         userMapper.update(user);
         return true;
     }
-    public List<User> getUsersByRank(int limit){
-        throw new RuntimeException("method not implemented");
+    public List<User> getUsersByRank(int page){
+        return userMapper.findByScoreRank();
     }
 }
