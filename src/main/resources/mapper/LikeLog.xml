@@ -14,7 +14,7 @@
         DELETE FROM like_log
         WHERE user_id = #{userId} and battle_log_id = #{logId};
     </delete>
-    <select parameterType="long" resultMap="logMap">
+    <select id="findByUserId" parameterType="long" resultMap="logMap">
         SELECT * FROM battle_log where id in
         (SELECT battle_log_id FROM like_log WHERE user_id = #{userId});
     </select>

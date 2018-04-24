@@ -22,7 +22,7 @@
         SELECT rate FROM win_rate
         WHERE user_id = #{userId} AND map_id = #{mapId};
     </select>
-    <select id="findByUserId" parameterType="userId" resultMap="hashMap">
+    <select id="findByUserId" parameterType="long" resultMap="hashMap">
         SELECT map_id, rate FROM win_rate
         WHERE user_id = #{userId}
         GROUP BY rate DESC;

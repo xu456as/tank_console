@@ -8,13 +8,13 @@
 <mapper namespace="me.fetonxu.tank_console.mapper.InviteMapper">
     <insert id="save">
         INSERT INTO invite(inviter_id, invitee_id, room_id, date, duration, state)
-        VALUES (#{inviterId}, #{inviteeId}, #{roomId}, #{duration}, #{state});
+        VALUES (#{inviterId}, #{inviteeId}, #{roomId},#{date}, #{duration}, #{state});
     </insert>
     <delete id="delete">
         DELETE FROM invite
         WHERE inviter_id = #{inviterId} and invitee_id = #{inviteeId} and room_id = #{roomId};
     </delete>
-    <select id="findByUserId" parameterType="userId">
+    <select id="findByUserId" parameterType="long">
         SELECT * FROM invite WHERE inviter_id = #{userId};
     </select>
 
