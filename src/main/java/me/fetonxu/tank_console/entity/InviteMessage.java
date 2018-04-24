@@ -12,6 +12,7 @@ public class InviteMessage {
     public static final int INVITE_MESSAGE_ACCEPT = 1;
     public static final int INVITE_MESSAGE_DENY = 2;
 
+    Long inviterId;
     User invitee;
     Room room;
     Long date = System.currentTimeMillis();

@@ -28,5 +28,6 @@ public class PlayerProject {
     private Float size = 0.0f;
     private Integer compileState = 0;
     private Integer runState = 0;
-    private List<BattleRecord> records = Collections.emptyList();
+    private Integer random = 0;
+//    private List<BattleRecord> records = Collections.emptyList();
 }

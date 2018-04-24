@@ -15,9 +15,9 @@ public class BattleLog {
     public final static int WINNER_B = 2;
 
     private String id;
-    private PlayerProject projectA;
-    private PlayerProject projectB;
-    private BattleMap map;
+    private Long projectAId;
+    private Long projectBId;
+    private Long mapId;
     private Integer winner = 0;
     private String url;
     private String compressType;

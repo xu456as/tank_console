@@ -11,25 +11,25 @@
         INSERT INTO project(user_id, name, url, compress,
                             language, date, size, compile_state,
                             run_state, random)
-                VALUES (#{project.user.id}, #{project.name},
-                        #{project.url}, #{project.compressType},
-                        #{project.language}, #{project.date},
-                        #{project.size}, #{project.compileState},
-                        #{project.runState}, #{project.random}
+                VALUES (#{user.id}, #{name},
+                        #{url}, #{compressType},
+                        #{language}, #{date},
+                        #{size}, #{compileState},
+                        #{runState}, #{random}
                 );
     </insert>
     <update id="update" parameterType="PlayerProject">
         UPDATE project
         <set>
-            <if test="name != null">name=#{project.name},</if>
-            <if test="url != null">url=#{project.url},</if>
-            <if test="compressType != null">compress=#{project.compressType},</if>
-            <if test="language != null">language=#{project.language},</if>
-            <if test="date != null">date=#{project.date},</if>
-            <if test="size != null">size=#{project.size},</if>
-            <if test="compileState != null">compile_state=#{project.compileState},</if>
-            <if test="runState != null">run_state=#{project.runState},</if>
-            <if test="random != null">random=#{project.random}</if>
+            <if test="name != null">name=#{name},</if>
+            <if test="url != null">url=#{url},</if>
+            <if test="compressType != null">compress=#{compressType},</if>
+            <if test="language != null">language=#{language},</if>
+            <if test="date != null">date=#{date},</if>
+            <if test="size != null">size=#{size},</if>
+            <if test="compileState != null">compile_state=#{compileState},</if>
+            <if test="runState != null">run_state=#{runState},</if>
+            <if test="random != null">random=#{random}</if>
         </set>
         WHERE id=#{project.id};
     </update>
@@ -51,14 +51,9 @@
         <result property="compileState" column="compile_state"/>
         <result property="runState" column="run_state"/>
         <result property="random" column="random"/>
-        <association property="user" column="user_id" javaType="User">
-            <id property="id" column="user_id"/>
-            <result property="email" column="user_email"/>
-            <result property="password" column="user_password"/>
-            <result property="type" column="user_type"/>
-            <result property="phone" column="user_phone"/>
-            <result property="score" column="user_score"/>
-        </association>
+        <association property="user" column="user_id" javaType="User"
+                     fetchType="eager"
+                     select="me.fetonxu.tank_console.mapper.UserMapper.findById"/>
     </resultMap>
 </mapper>
 

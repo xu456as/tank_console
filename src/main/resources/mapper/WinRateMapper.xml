@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        <!--void save(Long userId, Long mapId, Float rate);-->
+        <!--void update(Long userId, Long mapId, Float rate);-->
+        <!--Float find(Long userId, Long mapId);-->
+        <!--Map<Long, Float> findByUserId(Long userId);-->
+<mapper namespace="me.fetonxu.tank_console.mapper.WinRateMapper">
+    <insert id="save">
+        INSERT INTO win_rate(user_id, map_id, rate)
+        VALUES (#{userId}, #{mapId}, #{rate});
+    </insert>
+    <update id="update">
+        UPDATE win_rate
+        <set>
+            <if test="rate != null">rate=#{rate}</if>
+        </set>
+        WHERE user_id = #{userId} AND map_id = #{mapId};
+    </update>
+    <select id="find" resultType="float">
+        SELECT rate FROM win_rate
+        WHERE user_id = #{userId} AND map_id = #{mapId};
+    </select>
+    <select id="findByUserId" parameterType="userId" resultMap="hashMap">
+        SELECT map_id, rate FROM win_rate
+        WHERE user_id = #{userId}
+        GROUP BY rate DESC;
+    </select>
+
+    <resultMap id="hashMap"   type="HashMap">
+        <result property="key" column="map_id" />
+        <result property="value" column="rate" />
+    </resultMap>
+</mapper>

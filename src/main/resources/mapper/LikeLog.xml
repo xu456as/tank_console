@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        <!--void save(Long userId, Long logId, Long date);-->
+        <!--void delete(Long userId, Long logId);-->
+        <!--List<BattleLog> findByUserId(Long userId);-->
+<mapper namespace="me.fetonxu.tank_console.mapper.LikeLogMapper">
+    <insert id="save">
+        INSERT INTO like_log(user_id, battle_log_id, date)
+        VALUES (#{userId}, #{logId}, #{date});
+    </insert>
+    <delete id="delete">
+        DELETE FROM like_log
+        WHERE user_id = #{userId} and battle_log_id = #{logId};
+    </delete>
+    <select parameterType="long" resultMap="logMap">
+        SELECT * FROM battle_log where id in
+        (SELECT battle_log_id FROM like_log WHERE user_id = #{userId});
+    </select>
+
+    <resultMap id="logMap" type="BattleLog">
+        <id property="id" column="id"/>
+        <result property="projectAId" column="project_a_id"/>
+        <result property="projectBId" column="project_b_id"/>
+        <result property="mapId" column="map_id"/>
+        <result property="winner" column="winner"/>
+        <result property="url" column="url"/>
+        <result property="compress" column="compress"/>
+        <result property="date" column="date"/>
+        <result property="size" column="size"/>
+    </resultMap>
+</mapper>

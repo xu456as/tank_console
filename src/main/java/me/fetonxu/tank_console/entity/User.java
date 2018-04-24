@@ -23,8 +23,4 @@ public class User {
     private Integer type = TYPE_NORMAL;
     private String phone;
     private Integer score = 0;
-    private List<User> observeee = Collections.emptyList();
-    private List<BattleLog> likeLogs = Collections.emptyList();
-    private List<Map<BattleMap, Float>> winRates = Collections.emptyList();
-    private List<InviteMessage> inviteMessages = Collections.emptyList();
 }

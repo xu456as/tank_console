@@ -14,7 +14,8 @@ public class BattleRecord {
     public static final int WINNER_MYSQLF = 1;
     public static final int WINNER_ENEMY = 2;
 
-    private PlayerProject enemy;
+    private PlayerProject projectA;
+    private PlayerProject projectB;
     private BattleLog log;
     private Integer winner = 0;
     private Long date = System.currentTimeMillis();

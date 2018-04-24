@@ -15,7 +15,7 @@ public class Room {
     private PlayerProject project;
     private BattleMap map;
     private Integer maxChallengers = 0;
-    private Integer minChallengers = 0;
+    private Integer curChallengers = 0;
     private Long startTime = System.currentTimeMillis();
     private Long duration = 0l;
 

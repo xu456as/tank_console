@@ -12,11 +12,11 @@
     <update id="update" parameterType="BattleMap">
         UPDATE map
         <set>
-            <if test="name != null">name=#{map.name},</if>
-            <if test="url != null">url=#{map.url},</if>
-            <if test="date != null">date=#{map.date},</if>
-            <if test="winScore != null">win_score=#{map.winScore},</if>
-            <if test="loseScore != null">reason=#{map.loseScore}</if>
+            <if test="name != null">name=#{name},</if>
+            <if test="url != null">url=#{url},</if>
+            <if test="date != null">date=#{date},</if>
+            <if test="winScore != null">win_score=#{winScore},</if>
+            <if test="loseScore != null">lose_score=#{loseScore}</if>
         </set>
         WHERE id = #{id};
     </update>
@@ -38,13 +38,9 @@
         <result property="date" column="date"/>
         <result property="winScore" column="win_score"/>
         <result property="loseScore" column="lose_score"/>
-        <association property="user" column="user_id" javaType="User">
-            <id property="id" column="user_id"/>
-            <result property="email" column="user_email"/>
-            <result property="password" column="user_password"/>
-            <result property="type" column="user_type"/>
-            <result property="phone" column="user_phone"/>
-            <result property="score" column="user_score"/>
-        </association>
+        <association property="user" column="user_id" javaType="User"
+                     fetchType="eager"
+                     select="me.fetonxu.tank_console.mapper.UserMapper.findById"
+        />
     </resultMap>
 </mapper>

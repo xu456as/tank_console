@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<!--void save(@Param("inviterId") Long inviterId, @Param("inviteeId") Long inviteeId, @Param("roomId")Long roomId, @Param("duration")Long duration, @Param("state")Integer state);-->
+<!--void delete(@Param("inviterId")Long inviterId, @Param("inviteeId")Long inviteeId, @Param("roomId")Long roomId);-->
+<!--List<InviteMessage> findByUserId(Long userId);-->
+<mapper namespace="me.fetonxu.tank_console.mapper.InviteMapper">
+    <insert id="save">
+        INSERT INTO invite(inviter_id, invitee_id, room_id, date, duration, state)
+        VALUES (#{inviterId}, #{inviteeId}, #{roomId}, #{duration}, #{state});
+    </insert>
+    <delete id="delete">
+        DELETE FROM invite
+        WHERE inviter_id = #{inviterId} and invitee_id = #{inviteeId} and room_id = #{roomId};
+    </delete>
+    <select id="findByUserId" parameterType="userId">
+        SELECT * FROM invite WHERE inviter_id = #{userId};
+    </select>
+
+    <resultMap id="inviteMessageMap" type="InviteMessage">
+        <result property="inviterId" column="inviter_id"/>
+        <result property="date" column="date"/>
+        <result property="duration" column="duration"/>
+        <result property="state" column="state"/>
+        <association property="invitee" column="invitee_id"
+                     javaType="User"
+                     fetchType="eager" select="me.fetonxu.tank_console.mapper.UserMapper.findById"/>
+        <association property="room" column="room_id"
+                     javaType="Room"
+                     fetchType="eager" select="me.fetonxu.tank_console.mapper.RoomMapper.findById"/>
+    </resultMap>
+</mapper>
+        <!--Long inviterId;-->
+        <!--User invitee;-->
+        <!--Room room;-->
+        <!--Long date = System.currentTimeMillis();-->
+        <!--Long duration = 0l;-->
+        <!--Integer state = 0;-->

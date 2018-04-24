@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        <!--void save(Long observerId, Long observeeId, Long date);-->
+        <!--void delete(Long observerId, Long observeeId);-->
+        <!--List<User> findByUserId(Long userId);-->
+<mapper namespace="me.fetonxu.tank_console.mapper.ObserverMapper">
+    <insert id="save">
+        INSERT INTO observer(observer_id, observee_id, date)
+        VALUES(#{observerId}, #{observeeId}, #{date});
+    </insert>
+    <delete id="delete">
+        DELETE FROM observer
+        WHERE observer_id = #{observerId} and observee_id = #{observeeId};
+    </delete>
+    <select id="findByUserId" parameterType="long" resultMap="userMap">
+        SELECT * FROM user WHERE userId in
+        (SELECT observee_id FROM observer WHERE observer_id = #{userId});
+    </select>
+    <resultMap id="userMap" type="User">
+        <id property="id" column="id"/>
+        <result property="email" column="email"/>
+        <result property="password" column="password"/>
+        <result property="type" column="type" />
+        <result property="phone" column="phone"/>
+    </resultMap>
+</mapper>

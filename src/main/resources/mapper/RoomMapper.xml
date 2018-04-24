@@ -2,29 +2,29 @@
 <!DOCTYPE mapper
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-        <!--void update(Room room);-->
-        <!--void save(Room room);-->
-        <!--List<Room> findAll();-->
-    <!--Room findById(Long roomId);-->
+<!--void update(Room room);-->
+<!--void save(Room room);-->
+<!--List<Room> findAll();-->
+<!--Room findById(Long roomId);-->
 <mapper namespace="me.fetonxu.tank_console.mapper.RoomMapper">
     <insert id="save" parameterType="Room">
         INSERT INTO room(project_id, map_id,
          max_challengers, cur_challengers,
           start_time, duration)
-          VALUE (#{room.project.id}, #{room.map.id},
-          #{room.maxChallengers}, #{room.curChallengers},
-          #{room.startTime}, #{room.duration});
+          VALUE (#{project.id}, #{map.id},
+          #{maxChallengers}, #{curChallengers},
+          #{startTime}, #{duration});
     </insert>
     <update id="update" parameterType="Room">
         UPDATE room
         <set>
-            <if test="project != null">project_id=#{room.project.id},</if>
-            <if test="map != null">map_id=#{room.map.id},</if>
-            <if test="duration != null">duration=#{room.duration}</if>
+            <if test="project != null">project_id=#{project.id},</if>
+            <if test="map != null">map_id=#{map.id},</if>
+            <if test="duration != null">duration=#{duration}</if>
         </set>
         WHERE id = #{room.id};
     </update>
-    <select id="findById" parameterTpe="long" resultMap="roomMap">
+    <select id="findById" parameterType="long" resultMap="roomMap">
       SELECT * from room WHERE id = #{roomId};
     </select>
     <select id="findAll" resultMap="roomMap">
@@ -37,25 +37,28 @@
         <result property="curChallengers" column="cur_challengers"/>
         <result property="startTime" column="start_time"/>
         <result property="duration" column="duration"/>
-        <association property="project" column="project_id" javaType="PlayerProject">
-            <id property="id" column="project_id" />
-            <result property="name" column="project_name"/>
-            <result property="url" column="project_url"/>
-            <result property="compressType" column="project_compress"/>
-            <result property="language" column="project_language"/>
-            <result property="date" column="project_date"/>
-            <result property="size" column="project_size"/>
-            <result property="compileState" column="project_compile_state"/>
-            <result property="runState" column="project_run_state"/>
-            <result property="random" column="project_random"/>
-            <association property="user" column="project_user_id" javaType="User">
-                <id property="id" column="user_id"/>
-                <result property="email" column="user_email"/>
-                <result property="password" column="user_password"/>
-                <result property="type" column="user_type"/>
-                <result property="phone" column="user_phone"/>
-                <result property="score" column="user_score"/>
-            </association>
-        </association>
+        <association property="project" column="project_id"
+                     javaType="PlayerProject"
+                     fetchType="eager"
+                     select="me.fetonxu.tank_console.mapper.PlayerProjectMapper.findById"/>
+        <!--<id property="id" column="project_id" />-->
+        <!--<result property="name" column="project_name"/>-->
+        <!--<result property="url" column="project_url"/>-->
+        <!--<result property="compressType" column="project_compress"/>-->
+        <!--<result property="language" column="project_language"/>-->
+        <!--<result property="date" column="project_date"/>-->
+        <!--<result property="size" column="project_size"/>-->
+        <!--<result property="compileState" column="project_compile_state"/>-->
+        <!--<result property="runState" column="project_run_state"/>-->
+        <!--<result property="random" column="project_random"/>-->
+        <!--<association property="user" column="project_user_id" javaType="User">-->
+        <!--<id property="id" column="user_id"/>-->
+        <!--<result property="email" column="user_email"/>-->
+        <!--<result property="password" column="user_password"/>-->
+        <!--<result property="type" column="user_type"/>-->
+        <!--<result property="phone" column="user_phone"/>-->
+        <!--<result property="score" column="user_score"/>-->
+        <!--</association>-->
+        <!--</association>-->
     </resultMap>
 </mapper>
