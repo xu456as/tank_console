@@ -29,7 +29,7 @@
       SELECT * from room WHERE id = #{roomId};
     </select>
     <select id="findAll" resultMap="roomMap">
-        SELECT * from room;
+        SELECT * from room
     </select>
     <select id="findByExpiredTime" parameterType="long" resultMap="roomMap">
         SELECT * FROM room
@@ -39,14 +39,14 @@
         SELECT * from room
         WHERE project_id IN
         (SELECT id FROM project
-         WHERE project.user_id = #{userId});
+         WHERE project.user_id = #{userId})
     </select>
     <delete id="deleteByIds" parameterType="java.util.List">
         DELETE FROM room
         WHERE id IN
         <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
             #{item}
-        </foreach>;
+        </foreach>
     </delete>
 
     <resultMap id="roomMap" type="Room">

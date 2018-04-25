@@ -1,5 +1,6 @@
 package me.fetonxu.tank_console.service;
 
+import com.github.pagehelper.PageHelper;
 import me.fetonxu.tank_console.entity.Room;
 import me.fetonxu.tank_console.mapper.RoomMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,8 @@ public class RoomService {
         return true;
     }
 
-    public List<Room> getRooms() {
+    public List<Room> getRoomsPaged(int pageIdx, int pageSize) {
+        PageHelper.startPage(pageIdx, pageSize);
         return roomMapper.findAll();
     }
 

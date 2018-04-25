@@ -1,5 +1,6 @@
 package me.fetonxu.tank_console.controller;
 
+import com.github.pagehelper.PageHelper;
 import me.fetonxu.tank_console.entity.BattleMap;
 import me.fetonxu.tank_console.entity.PlayerProject;
 import me.fetonxu.tank_console.entity.Room;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
@@ -30,7 +32,7 @@ import javax.servlet.http.HttpSession;
         PlayerProject project = projectMapper.findById(projectId);
         BattleMap map = battleMapMapper.findById(mapId);
 
-        if(project == null || map == null || session.getAttribute("currentUser") == null){
+        if (project == null || map == null || session.getAttribute("currentUser") == null) {
             return JsonUtil.createJson("0", "Invalid behavior");
         }
 
@@ -45,7 +47,9 @@ import javax.servlet.http.HttpSession;
         return JsonUtil.createJson("1", "Create room successfully");
     }
 
-    @RequestMapping("getAll") @ResponseBody public Object getRooms() {
-        return roomService.getRooms();
+    @RequestMapping("getRooms") @ResponseBody public Object getRooms(
+        @RequestParam(value = "pageIdx", required = false, defaultValue = "1") Integer pageIdx,
+        @RequestParam(value = "pageSize", required = false, defaultValue = "10") Integer pageSize) {
+        return roomService.getRoomsPaged(pageIdx, pageSize);
     }
 }
