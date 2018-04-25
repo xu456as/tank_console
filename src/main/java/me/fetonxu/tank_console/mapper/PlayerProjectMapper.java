@@ -14,5 +14,10 @@ public interface PlayerProjectMapper {
 
     List<PlayerProject> findAll();
 
+    List<PlayerProject> findByUserId(Long userId);
+
     PlayerProject findById(Long projectId);
+
+    void deleteById(Long projectId);
+
 }
