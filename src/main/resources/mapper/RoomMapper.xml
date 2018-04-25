@@ -59,5 +59,9 @@
                      javaType="PlayerProject"
                      fetchType="eager"
                      select="me.fetonxu.tank_console.mapper.PlayerProjectMapper.findById"/>
+        <association property="map" column="map_id"
+                     javaType="BattleMap"
+                     fetchType="eager"
+                     select="me.fetonxu.tank_console.mapper.BattleMapMapper.findById"/>
     </resultMap>
 </mapper>

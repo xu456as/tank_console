@@ -37,6 +37,10 @@ public class StrategyManagementService {
         return projectMapper.findByUserId(userId);
     }
 
+    public PlayerProject getProjectById(long projectId) {
+        return projectMapper.findById(projectId);
+    }
+
     public File getActualFile(long projectId) {
         PlayerProject project = projectMapper.findById(projectId);
         return new File(project.getUrl());

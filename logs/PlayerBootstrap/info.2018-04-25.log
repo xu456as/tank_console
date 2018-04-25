@@ -1,0 +1,694 @@
+17:27:46.905 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 6762 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+17:27:46.940 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+17:27:47.038 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 17:27:47 ULAT 2018]; root of context hierarchy
+17:27:47.238 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+17:27:49.123 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+17:27:49.144 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17:27:49.169 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+17:27:49.170 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+17:27:49.261 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17:27:49.261 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2223 ms
+17:27:49.500 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+17:27:49.513 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:27:49.514 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:27:49.514 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:27:49.515 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+17:27:50.658 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 17:27:47 ULAT 2018]; root of context hierarchy
+17:27:50.806 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+17:27:50.812 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+17:27:50.814 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:27:50.815 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:27:50.848 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:50.848 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:50.992 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:27:51.495 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+17:27:51.497 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:27:51.503 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+17:27:51.516 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+17:27:51.535 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+17:27:51.551 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+17:27:51.557 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.419 seconds (JVM running for 7.068)
+17:28:00.525 [http-nio-8080-exec-2] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+17:28:00.526 [http-nio-8080-exec-2] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+17:28:00.544 [http-nio-8080-exec-2] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+17:28:20.478 [http-nio-8080-exec-4] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:26:26.651 [Thread-15] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 17:27:47 ULAT 2018]; root of context hierarchy
+19:26:26.670 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:26:26.671 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:26:26.676 [Thread-15] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:26:33.933 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7290 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:26:33.964 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:26:34.118 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:26:34 ULAT 2018]; root of context hierarchy
+19:26:34.171 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:26:35.975 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:26:35.992 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:26:36.008 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:26:36.008 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:26:36.079 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:26:36.079 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 1961 ms
+19:26:36.225 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:26:36.231 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:26:36.232 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:26:36.232 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:26:36.232 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:26:37.153 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:26:34 ULAT 2018]; root of context hierarchy
+19:26:37.231 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:26:37.233 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:26:37.233 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:26:37.235 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:26:37.237 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:26:37.241 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(me.fetonxu.tank_console.entity.User,javax.servlet.http.HttpSession)
+19:26:37.242 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,me.fetonxu.tank_console.entity.User)
+19:26:37.243 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:26:37.249 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:26:37.250 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:26:37.314 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:26:37.315 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:26:37.429 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:26:37.966 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:26:37.967 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:26:37.975 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:26:37.996 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:26:38.014 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:26:38.026 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:26:38.031 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.088 seconds (JVM running for 6.729)
+19:30:22.256 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:30:22.256 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:30:22.276 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+19:31:06.153 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:26:34 ULAT 2018]; root of context hierarchy
+19:31:06.157 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:31:06.158 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:31:13.287 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7329 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:31:13.292 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:31:13.616 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@338c99c8: startup date [Wed Apr 25 19:31:13 ULAT 2018]; root of context hierarchy
+19:31:13.910 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:31:15.805 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:31:15.824 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:31:15.845 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:31:15.845 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:31:15.939 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:31:15.940 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2324 ms
+19:31:16.121 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:31:16.125 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:31:16.125 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:31:16.126 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:31:16.126 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:31:17.006 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@338c99c8: startup date [Wed Apr 25 19:31:13 ULAT 2018]; root of context hierarchy
+19:31:17.073 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:31:17.074 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:31:17.075 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:31:17.075 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:31:17.076 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:31:17.077 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,me.fetonxu.tank_console.entity.User)
+19:31:17.077 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:31:17.078 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(me.fetonxu.tank_console.entity.User,javax.servlet.http.HttpSession)
+19:31:17.080 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:31:17.081 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:31:17.119 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:31:17.119 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:31:17.210 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:31:17.727 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:31:17.729 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:31:17.734 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:31:17.744 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:31:17.759 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:31:17.771 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:31:17.776 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.908 seconds (JVM running for 6.35)
+19:31:23.098 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:31:23.099 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:31:23.116 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+19:34:45.526 [http-nio-8080-exec-3] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:35:17.720 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@338c99c8: startup date [Wed Apr 25 19:31:13 ULAT 2018]; root of context hierarchy
+19:35:17.726 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:35:17.728 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:35:17.732 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:40:35.771 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7411 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:40:35.777 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:40:35.989 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:40:35 ULAT 2018]; root of context hierarchy
+19:40:36.032 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:40:37.881 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:40:37.898 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:40:37.912 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:40:37.912 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:40:37.988 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:40:37.988 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 1999 ms
+19:40:38.214 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:40:38.223 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:40:38.223 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:40:38.224 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:40:38.224 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:40:39.113 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:40:35 ULAT 2018]; root of context hierarchy
+19:40:39.182 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:40:39.183 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:40:39.184 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:40:39.185 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:40:39.185 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:40:39.187 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:40:39.187 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:40:39.187 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:40:39.191 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:40:39.191 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:40:39.299 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:40:39.299 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:40:39.431 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:40:39.915 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:40:39.917 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:40:39.923 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:40:39.934 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:40:39.951 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:40:39.965 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:40:39.970 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.719 seconds (JVM running for 6.34)
+19:40:43.925 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:40:43.925 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:40:43.942 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+19:40:44.179 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:41:58.657 [Thread-13] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:40:35 ULAT 2018]; root of context hierarchy
+19:41:58.665 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:41:58.665 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:41:58.674 [Thread-13] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:42:08.959 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7424 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:42:08.965 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:42:09.125 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:42:09 ULAT 2018]; root of context hierarchy
+19:42:09.154 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:42:10.901 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:42:10.929 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:42:10.942 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:42:10.943 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:42:11.019 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:42:11.020 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 1895 ms
+19:42:11.270 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:42:11.275 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:42:11.278 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:42:11.279 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:42:11.279 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:42:12.158 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:42:09 ULAT 2018]; root of context hierarchy
+19:42:12.223 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:42:12.225 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:42:12.227 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:42:12.228 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:42:12.229 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:42:12.230 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:42:12.231 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:42:12.231 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:42:12.234 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:42:12.234 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:42:12.288 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:42:12.288 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:42:12.353 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:42:12.844 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:42:12.846 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:42:12.851 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:42:12.862 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:42:12.880 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:42:12.894 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:42:12.900 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.42 seconds (JVM running for 6.263)
+19:42:20.093 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:42:20.093 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:42:20.115 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+19:42:20.379 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:44:19.424 [Thread-13] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:42:09 ULAT 2018]; root of context hierarchy
+19:44:19.432 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:44:19.433 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:44:19.447 [Thread-13] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:44:43.570 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7450 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:44:43.576 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:44:43.805 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:44:43 ULAT 2018]; root of context hierarchy
+19:44:43.891 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:44:45.910 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:44:45.946 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:44:45.963 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:44:45.963 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:44:46.071 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:44:46.071 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2266 ms
+19:44:46.363 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:44:46.368 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:44:46.369 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:44:46.369 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:44:46.369 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:44:47.314 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:44:43 ULAT 2018]; root of context hierarchy
+19:44:47.410 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:44:47.416 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:44:47.417 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:44:47.418 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:44:47.420 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:44:47.422 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:44:47.423 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:44:47.423 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:44:47.429 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:44:47.431 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:44:47.502 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:44:47.503 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:44:47.647 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:44:48.186 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:44:48.187 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:44:48.193 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:44:48.203 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:44:48.219 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:44:48.282 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:44:48.287 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.063 seconds (JVM running for 6.562)
+19:44:55.126 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:44:55.126 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:44:55.144 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+19:47:10.429 [http-nio-8080-exec-4] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:47:52.564 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:44:43 ULAT 2018]; root of context hierarchy
+19:47:52.568 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:47:52.568 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:47:52.575 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:48:50.304 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7481 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:48:50.348 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:48:50.501 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:48:50 ULAT 2018]; root of context hierarchy
+19:48:50.538 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:48:52.514 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:48:52.551 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:48:52.607 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:48:52.608 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:48:52.983 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:48:52.984 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2483 ms
+19:48:53.245 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:48:53.253 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:48:53.255 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:48:53.256 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:48:53.256 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:48:54.199 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:48:50 ULAT 2018]; root of context hierarchy
+19:48:54.350 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:48:54.351 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:48:54.357 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:48:54.360 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:48:54.361 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:48:54.362 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:48:54.362 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:48:54.362 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:48:54.371 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:48:54.372 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:48:54.431 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:48:54.432 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:48:54.517 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:48:55.038 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:48:55.040 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:48:55.047 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:48:55.060 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:48:55.077 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:48:55.100 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:48:55.112 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.308 seconds (JVM running for 6.831)
+19:48:58.196 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:48:58.196 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:48:58.212 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+19:48:58.328 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:51:38.853 [Thread-15] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:48:50 ULAT 2018]; root of context hierarchy
+19:51:38.857 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:51:38.858 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:51:38.863 [Thread-15] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:52:33.466 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7508 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:52:33.475 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:52:33.686 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:52:33 ULAT 2018]; root of context hierarchy
+19:52:34.075 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:52:35.836 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:52:35.854 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:52:35.872 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:52:35.873 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:52:35.957 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:52:35.958 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2273 ms
+19:52:36.115 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:52:36.120 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:52:36.121 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:52:36.121 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:52:36.122 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:52:37.229 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:52:33 ULAT 2018]; root of context hierarchy
+19:52:37.332 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:52:37.334 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:52:37.336 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:52:37.339 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:52:37.341 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:52:37.343 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:52:37.343 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:52:37.343 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:52:37.353 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:52:37.354 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:52:37.420 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:52:37.421 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:52:37.509 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:52:38.008 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:52:38.010 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:52:38.017 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:52:38.028 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:52:38.045 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:52:38.059 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:52:38.065 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.95 seconds (JVM running for 6.668)
+19:53:09.231 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:53:09.232 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:53:09.250 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+19:53:09.325 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:55:28.535 [Thread-13] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:52:33 ULAT 2018]; root of context hierarchy
+19:55:28.539 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:55:28.540 [Thread-13] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:55:28.547 [Thread-13] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:55:36.011 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7538 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:55:36.023 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:55:36.087 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:55:36.137 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:55:36 ULAT 2018]; root of context hierarchy
+19:55:38.263 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:55:38.281 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:55:38.297 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:55:38.298 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:55:38.378 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:55:38.379 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2243 ms
+19:55:38.558 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:55:38.565 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:55:38.567 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:55:38.567 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:55:38.567 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:55:39.660 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:55:36 ULAT 2018]; root of context hierarchy
+19:55:39.803 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:55:39.806 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:55:39.807 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:55:39.810 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:55:39.811 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:55:39.813 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:55:39.813 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:55:39.814 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:55:39.844 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:55:39.846 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:55:39.977 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:55:39.978 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:55:40.031 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:55:40.566 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:55:40.568 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:55:40.574 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:55:40.585 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:55:40.602 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:55:40.643 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:55:40.648 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.199 seconds (JVM running for 6.68)
+19:55:52.201 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:55:52.202 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:55:52.219 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+19:55:52.290 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+19:58:18.452 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 19:55:36 ULAT 2018]; root of context hierarchy
+19:58:18.457 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+19:58:18.458 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+19:58:18.464 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+19:58:38.599 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7573 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+19:58:38.604 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+19:58:38.738 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:58:38 ULAT 2018]; root of context hierarchy
+19:58:38.796 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+19:58:41.207 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+19:58:41.229 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+19:58:41.255 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+19:58:41.256 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+19:58:41.386 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+19:58:41.387 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2649 ms
+19:58:41.585 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+19:58:41.589 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:58:41.589 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:58:41.590 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:58:41.590 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+19:58:42.553 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:58:38 ULAT 2018]; root of context hierarchy
+19:58:42.676 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+19:58:42.678 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+19:58:42.679 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+19:58:42.681 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+19:58:42.685 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+19:58:42.688 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+19:58:42.689 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+19:58:42.689 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+19:58:42.692 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:58:42.694 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:58:42.780 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:58:42.781 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:58:42.865 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:58:43.325 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+19:58:43.327 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+19:58:43.333 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+19:58:43.344 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+19:58:43.363 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+19:58:43.378 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+19:58:43.383 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.382 seconds (JVM running for 7.156)
+19:59:09.822 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:59:09.822 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+19:59:09.839 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+19:59:09.947 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:09:08.772 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21ba0741: startup date [Wed Apr 25 19:58:38 ULAT 2018]; root of context hierarchy
+20:09:08.794 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:09:08.795 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:09:08.807 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:09:15.634 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7650 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:09:15.638 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:09:15.707 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:09:15 ULAT 2018]; root of context hierarchy
+20:09:15.990 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:09:17.926 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:09:17.944 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:09:17.959 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:09:17.959 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:09:18.042 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:09:18.042 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2335 ms
+20:09:18.292 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:09:18.300 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:09:18.301 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:09:18.301 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:09:18.302 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:09:19.265 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:09:15 ULAT 2018]; root of context hierarchy
+20:09:19.422 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)
+20:09:19.425 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:09:19.425 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:09:19.427 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:09:19.429 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:09:19.434 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:09:19.435 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:09:19.435 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:09:19.438 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:09:19.439 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:09:19.534 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:09:19.535 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:09:19.680 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:09:20.230 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:09:20.232 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:09:20.238 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:09:20.259 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:09:20.277 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:09:20.291 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:09:20.297 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.977 seconds (JVM running for 6.516)
+20:09:33.349 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:09:33.351 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:09:33.368 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+20:09:33.676 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:10:56.175 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:09:15 ULAT 2018]; root of context hierarchy
+20:10:56.182 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:10:56.182 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:10:56.192 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:13:18.376 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7684 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:13:18.382 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:13:18.592 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:13:18 ULAT 2018]; root of context hierarchy
+20:13:18.754 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:13:20.577 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:13:20.592 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:13:20.605 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:13:20.605 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:13:20.684 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:13:20.684 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2092 ms
+20:13:20.892 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:13:20.903 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:13:20.905 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:13:20.905 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:13:20.906 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:13:22.131 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:13:18 ULAT 2018]; root of context hierarchy
+20:13:22.263 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)
+20:13:22.264 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:13:22.265 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:13:22.265 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:13:22.266 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:13:22.268 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:13:22.268 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:13:22.269 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:13:22.271 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:13:22.272 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:13:22.310 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:13:22.311 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:13:22.459 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:13:23.000 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:13:23.015 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:13:23.024 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:13:23.039 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:13:23.058 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:13:23.111 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:13:23.115 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.415 seconds (JVM running for 7.107)
+20:13:32.338 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:13:32.338 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:13:32.358 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+20:13:32.524 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:14:54.877 [Thread-15] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:13:18 ULAT 2018]; root of context hierarchy
+20:14:54.883 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:14:54.883 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:14:54.897 [Thread-15] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:15:13.067 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7708 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:15:13.075 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:15:13.390 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:15:13 ULAT 2018]; root of context hierarchy
+20:15:13.525 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:15:15.241 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:15:15.256 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:15:15.269 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:15:15.269 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:15:15.353 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:15:15.353 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 1965 ms
+20:15:15.515 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:15:15.524 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:15:15.525 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:15:15.525 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:15:15.526 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:15:16.444 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:15:13 ULAT 2018]; root of context hierarchy
+20:15:16.519 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+20:15:16.522 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:15:16.523 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:15:16.526 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:15:16.529 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:15:16.532 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:15:16.533 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:15:16.533 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:15:16.540 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:15:16.542 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:15:16.612 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:15:16.612 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:15:16.684 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:15:17.267 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:15:17.268 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:15:17.274 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:15:17.284 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:15:17.300 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:15:17.312 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:15:17.317 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 4.903 seconds (JVM running for 6.56)
+20:16:06.654 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:16:06.656 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:16:06.686 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+20:16:06.830 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:17:06.388 [Thread-14] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:15:13 ULAT 2018]; root of context hierarchy
+20:17:06.393 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:17:06.393 [Thread-14] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:17:06.400 [Thread-14] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:17:15.562 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7730 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:17:15.568 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:17:15.732 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68df9280: startup date [Wed Apr 25 20:17:15 ULAT 2018]; root of context hierarchy
+20:17:15.766 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:17:18.136 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:17:18.159 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:17:18.183 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:17:18.183 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:17:18.282 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:17:18.282 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2550 ms
+20:17:18.494 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:17:18.498 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:17:18.498 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:17:18.499 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:17:18.499 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:17:19.649 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68df9280: startup date [Wed Apr 25 20:17:15 ULAT 2018]; root of context hierarchy
+20:17:19.855 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,java.io.InputStream,java.lang.String,java.lang.Integer,java.lang.Integer)
+20:17:19.857 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:17:19.858 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:17:19.859 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:17:19.862 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:17:19.871 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:17:19.873 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:17:19.874 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:17:19.883 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:17:19.887 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:17:19.938 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:17:19.938 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:17:19.996 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:17:20.593 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:17:20.595 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:17:20.601 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:17:20.616 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:17:20.634 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:17:20.651 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:17:20.657 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.863 seconds (JVM running for 7.738)
+20:18:08.189 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:18:08.190 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:18:08.208 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+20:18:08.348 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:18:41.874 [Thread-16] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@68df9280: startup date [Wed Apr 25 20:17:15 ULAT 2018]; root of context hierarchy
+20:18:41.878 [Thread-16] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:18:41.880 [Thread-16] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:18:41.892 [Thread-16] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:18:49.301 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7741 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:18:49.306 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:18:49.443 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:18:49 ULAT 2018]; root of context hierarchy
+20:18:49.477 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:18:51.855 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:18:51.884 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:18:51.896 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:18:51.897 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:18:51.974 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:18:51.974 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2531 ms
+20:18:52.293 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:18:52.309 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:18:52.310 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:18:52.310 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:18:52.311 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:18:53.405 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:18:49 ULAT 2018]; root of context hierarchy
+20:18:53.578 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+20:18:53.582 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:18:53.583 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:18:53.586 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:18:53.587 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:18:53.588 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:18:53.589 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:18:53.589 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:18:53.592 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:18:53.593 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:18:53.746 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:18:53.747 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:18:53.842 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:18:54.381 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:18:54.384 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:18:54.390 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:18:54.402 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:18:54.418 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:18:54.433 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:18:54.438 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.57 seconds (JVM running for 7.069)
+20:18:58.643 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:18:58.643 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:18:58.661 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+20:19:04.876 [http-nio-8080-exec-2] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited
+20:39:04.195 [Thread-15] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:18:49 ULAT 2018]; root of context hierarchy
+20:39:04.201 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+20:39:04.201 [Thread-15] [INFO] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+20:39:04.207 [Thread-15] [INFO] com.alibaba.druid.pool.DruidDataSource.close - {dataSource-1} closed
+20:39:12.213 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarting - Starting ServerMain on xfz-laptop with PID 7896 (/Users/fetonxu/Works/workspace/TankWeb/TankConsole/target/classes started by fetonxu in /Users/fetonxu/Works/workspace/TankWeb/TankConsole)
+20:39:12.219 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+20:39:12.453 [main] [INFO] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.prepareRefresh - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:39:12 ULAT 2018]; root of context hierarchy
+20:39:12.595 [background-preinit] [INFO] o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 5.3.6.Final
+20:39:14.416 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.initialize - Tomcat initialized with port(s): 8080 (http)
+20:39:14.431 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+20:39:14.445 [main] [INFO] org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+20:39:14.446 [main] [INFO] org.apache.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+20:39:14.524 [localhost-startStop-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20:39:14.525 [localhost-startStop-1] [INFO] o.s.web.context.ContextLoader.prepareEmbeddedWebApplicationContext - Root WebApplicationContext: initialization completed in 2072 ms
+20:39:14.765 [localhost-startStop-1] [INFO] o.s.b.w.servlet.ServletRegistrationBean.onStartup - Mapping servlet: 'dispatcherServlet' to [/]
+20:39:14.771 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:39:14.772 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:39:14.772 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:39:14.772 [localhost-startStop-1] [INFO] o.s.b.web.servlet.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+20:39:16.217 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@479460a6: startup date [Wed Apr 25 20:39:12 ULAT 2018]; root of context hierarchy
+20:39:16.283 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/add],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.addMap(javax.servlet.http.HttpSession,byte[],java.lang.String,java.lang.Integer,java.lang.Integer)
+20:39:16.285 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/delete],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.deleteMap(java.lang.Long)
+20:39:16.285 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/map/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.MapController.getAll()
+20:39:16.286 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/ping]}" onto public java.lang.Object me.fetonxu.tank_console.controller.PingController.ping(java.lang.String,javax.servlet.http.HttpSession)
+20:39:16.287 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/room/getAll]}" onto public java.lang.Object me.fetonxu.tank_console.controller.RoomController.getRooms()
+20:39:16.288 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/room/create],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.RoomController.createRoom(javax.servlet.http.HttpSession,java.lang.Long,java.lang.Long)
+20:39:16.288 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/schedule/result],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.ScheduleController.receiveGameResult()
+20:39:16.289 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logup],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logUp(me.fetonxu.tank_console.entity.User)
+20:39:16.290 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/login],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logIn(javax.servlet.http.HttpSession,java.lang.String,java.lang.String)
+20:39:16.290 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/user/logout],methods=[POST]}" onto public java.lang.Object me.fetonxu.tank_console.controller.UserController.logOut(javax.servlet.http.HttpSession)
+20:39:16.292 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:39:16.293 [main] [INFO] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:39:16.324 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:39:16.324 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:39:16.360 [main] [INFO] o.s.w.s.handler.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:39:16.888 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+20:39:16.890 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:39:16.895 [main] [INFO] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+20:39:16.906 [main] [INFO] o.apache.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+20:39:16.923 [main] [INFO] o.apache.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+20:39:16.935 [main] [INFO] o.s.b.c.e.t.TomcatEmbeddedServletContainer.start - Tomcat started on port(s): 8080 (http)
+20:39:16.940 [main] [INFO] me.fetonxu.tank_console.ServerMain.logStarted - Started ServerMain in 5.098 seconds (JVM running for 6.632)
+20:40:47.021 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:40:47.022 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+20:40:47.038 [http-nio-8080-exec-1] [INFO] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+20:40:47.139 [http-nio-8080-exec-1] [INFO] com.alibaba.druid.pool.DruidDataSource.init - {dataSource-1} inited

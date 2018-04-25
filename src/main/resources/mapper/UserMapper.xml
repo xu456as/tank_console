@@ -34,6 +34,12 @@
         ORDER BY score DESC ;
     </select>
 
+    <!--User findByEmail(String email);-->
+    <select id="findByEmail" parameterType="String" resultMap="userMap">
+        SELECT * from user
+        WHERE email = #{email};
+    </select>
+
     <delete id="deleteById" parameterType="long">
         DELETE FROM user
         WHERE id = #{userId};

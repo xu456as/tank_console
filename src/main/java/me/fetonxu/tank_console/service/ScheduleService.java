@@ -65,6 +65,10 @@ public class ScheduleService {
     public String runProject(long projectId, long timestamp){
         return null;
     }
+    public boolean stopProject(long projectId, long timestamp){
+
+        return true;
+    }
     public String runJudge(long projectAId, long timestampA, long projectBId, long timestampB){
         return null;
     }
