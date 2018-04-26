@@ -1,8 +1,10 @@
 package me.fetonxu.tank_console.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import me.fetonxu.tank_console.entity.BattleMap;
 import me.fetonxu.tank_console.entity.User;
+import me.fetonxu.tank_console.mapper.BattleMapMapper;
 import me.fetonxu.tank_console.service.MapService;
 import me.fetonxu.tank_console.util.Config;
 import me.fetonxu.tank_console.util.FileUtil;
@@ -23,6 +25,8 @@ import java.io.InputStream;
     private final static Logger logger = LoggerFactory.getLogger(MapController.class);
 
     @Autowired private MapService mapService;
+
+    @Autowired private BattleMapMapper mapMapper;
 
     @PostMapping("/add") @ResponseBody
     public Object addMap(HttpSession session, @RequestBody byte[] body,
@@ -60,12 +64,40 @@ import java.io.InputStream;
         return JsonUtil.createJson(code, result);
     }
 
-    @PostMapping("/delete") @ResponseBody
-    public Object deleteMap(Long mapId) {
-        mapService.deleteMap(mapId);
-        return JsonUtil.createJson("1", "Delete successfully");
+    @PostMapping("/edit")
+    @ResponseBody
+    public Object editMap(HttpSession session, @RequestBody String mapJson){
+        User user = (User)session.getAttribute("currentUser");
+        if(user == null || user.getType() != User.TYPE_MANAGER){
+            return JsonUtil.createJson("0", "Invalid behavior");
+        }
+        JSONObject json = JSON.parseObject(mapJson);
+        BattleMap battleMap = mapMapper.findById(json.getLong("id"));
+        battleMap.setLoseScore(json.getInteger("loseScore"));
+        battleMap.setLoseScore(json.getInteger("winScore"));
+        battleMap.setFlagScore(json.getInteger("flagScore"));
+        battleMap.setNumberOfTank(json.getInteger("numberOfTank"));
+        battleMap.setTankSpeed(json.getInteger("tankSpeed"));
+        battleMap.setShellSpeed(json.getInteger("shellSpeed"));
+        battleMap.setTankHp(json.getInteger("tankHp"));
+        battleMap.setTankScore(json.getInteger("tankScore"));
+        battleMap.setFlagScore(json.getInteger("flagScore"));
+        battleMap.setRoundTimeout(json.getInteger("roundTimeout"));
+        battleMap.setMaxRound(json.getInteger("maxRound"));
+        mapMapper.update(battleMap);
+        return JsonUtil.createJson("1", "Map altered successfully");
     }
 
+    @PostMapping("/delete") @ResponseBody
+    public Object deleteMap(HttpSession session, @RequestBody String mapJson) {
+        User user = (User)session.getAttribute("currentUser");
+        if(user == null || user.getType() != User.TYPE_MANAGER){
+            return JsonUtil.createJson("0", "Invalid behavior");
+        }
+        JSONObject json = JSON.parseObject(mapJson);
+        mapService.deleteMap(json.getLong("mapId"));
+        return JsonUtil.createJson("1", "Delete successfully");
+    }
 
     @RequestMapping("/getAll") @ResponseBody public Object getAll() {
         return mapService.getMaps();

@@ -38,6 +38,14 @@
     <resultMap id="mapMap" type="BattleMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
+        <result property="numberOfTank" column="no_tank"/>
+        <result property="tankSpeed" column="tank_speed"/>
+        <result property="shellSpeed" column="shell_speed"/>
+        <result property="tankHp" column="tank_hp"/>
+        <result property="tankScore" column="tank_score"/>
+        <result property="flagScore" column="flag_score"/>
+        <result property="maxRound" column="max_round"/>
+        <result property="roundTimeout" column="round_timeout"/>
         <result property="url" column="url"/>
         <result property="date" column="date"/>
         <result property="winScore" column="win_score"/>
@@ -47,4 +55,5 @@
                      select="me.fetonxu.tank_console.mapper.UserMapper.findById"
         />
     </resultMap>
+
 </mapper>

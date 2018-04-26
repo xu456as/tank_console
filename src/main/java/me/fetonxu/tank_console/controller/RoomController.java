@@ -47,8 +47,8 @@ import javax.servlet.http.HttpSession;
         return JsonUtil.createJson("1", "Create room successfully");
     }
 
-    @RequestMapping("getRooms") @ResponseBody public Object getRooms(
-        @RequestParam(value = "pageIdx", required = false, defaultValue = "1") Integer pageIdx,
+    @RequestMapping("getRooms") @ResponseBody
+    public Object getRooms(@RequestParam(value = "pageIdx", required = false, defaultValue = "1") Integer pageIdx,
         @RequestParam(value = "pageSize", required = false, defaultValue = "10") Integer pageSize) {
         return roomService.getRoomsPaged(pageIdx, pageSize);
     }

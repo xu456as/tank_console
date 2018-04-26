@@ -5,9 +5,11 @@ import com.alibaba.fastjson.JSONObject;
 import io.netty.handler.codec.http.HttpRequest;
 import me.fetonxu.tank_console.entity.User;
 import me.fetonxu.tank_console.service.UserService;
+import me.fetonxu.tank_console.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,7 +23,12 @@ public class UserController {
 
     @PostMapping("logup")
     @ResponseBody
-    public Object logUp(User user){
+    public Object logUp(@RequestBody String userJson){
+        User user = JSON.parseObject(userJson, User.class);
+        User userBack = userService.findUser(user.getEmail());
+        if(userBack != null){
+            return JsonUtil.createJson("0", "The email has been registered");
+        }
         userService.addUser(user);
         JSONObject json = new JSONObject();
         json.put("code", "1");
@@ -31,10 +38,11 @@ public class UserController {
 
     @PostMapping("login")
     @ResponseBody
-    public Object logIn(HttpSession session, String email, String password){
+    public Object logIn(HttpSession session, @RequestBody String userJson){
+        User user = JSONObject.parseObject(userJson, User.class);
         JSONObject json = new JSONObject();
-        User userBack = userService.findUser(email);
-        if(password.equals(userBack.getPassword())){
+        User userBack = userService.findUser(user.getEmail());
+        if(user.getPassword().equals(userBack.getPassword())){
             session.setAttribute("currentUser", userBack);
             json.put("code",  "1");
             json.put("result",  "Login Successfully!");

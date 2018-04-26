@@ -1,5 +1,6 @@
 package me.fetonxu.tank_console.service;
 
+import com.alibaba.fastjson.JSONObject;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufUtil;
@@ -69,7 +70,7 @@ public class ScheduleService {
 
         return true;
     }
-    public String runJudge(long projectAId, long timestampA, long projectBId, long timestampB){
+    public String runJudge(String strJson){
         return null;
     }
     public void receiveLog(File log){

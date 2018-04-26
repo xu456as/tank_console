@@ -31,7 +31,7 @@
             <if test="runState != null">run_state=#{runState},</if>
             <if test="random != null">random=#{random}</if>
         </set>
-        WHERE id=#{project.id};
+        WHERE id=#{id};
     </update>
     <!--void deleteById(Long projectId);-->
     <delete id="deleteById" parameterType="long">
@@ -40,11 +40,11 @@
     </delete>
     <!--List<PlayerProject> findByUserId(Long userId);-->
     <select id="findByUserId" parameterType="long" resultMap="projectMap">
-        SELECT FROM project
-        WHERE user_id = #{userId};
+        SELECT * FROM project
+        WHERE user_id = #{userId}
     </select>
     <select id="findById" parameterType="long" resultMap="projectMap" >
-      SELECT * from project WHERE id=#{project_id};
+      SELECT * from project WHERE id=#{projectId};
     </select>
     <select id="findAll" resultMap="projectMap" >
         SELECT * from project;
