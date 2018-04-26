@@ -26,6 +26,13 @@
         WHERE id = #{mapId};
     </select>
 
+    <!--BattleMap findByName(String mapName);-->
+    <select id="findByName" parameterType="String" resultMap="mapMap">
+        SELECT *
+        FROM map
+        WHERE name = #{mapName};
+    </select>
+
     <select id="findAll" resultMap="mapMap">
         SELECT *
         FROM map;

@@ -1,28 +1,28 @@
 package me.fetonxu.tank_console.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import me.fetonxu.tank_console.entity.BattleMap;
-import me.fetonxu.tank_console.entity.PlayerProject;
-import me.fetonxu.tank_console.entity.Room;
-import me.fetonxu.tank_console.entity.User;
+import me.fetonxu.tank_console.entity.*;
+import me.fetonxu.tank_console.mapper.BattleLogMapper;
+import me.fetonxu.tank_console.mapper.BattleMapMapper;
 import me.fetonxu.tank_console.mapper.PlayerProjectMapper;
 import me.fetonxu.tank_console.mapper.RoomMapper;
 import me.fetonxu.tank_console.service.MachinePortService;
 import me.fetonxu.tank_console.service.ScheduleService;
 import me.fetonxu.tank_console.util.Config;
+import me.fetonxu.tank_console.util.FileUtil;
 import me.fetonxu.tank_console.util.JsonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpSession;
-import javax.swing.plaf.PanelUI;
-import java.util.concurrent.ConcurrentLinkedDeque;
+
 
 @Controller @RequestMapping("/schedule") public class ScheduleController {
 
@@ -32,15 +32,50 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
     @Autowired private RoomMapper roomMapper;
 
+    @Autowired private BattleMapMapper mapMapper;
+
     @Autowired private ScheduleService scheduleService;
 
     @Autowired private MachinePortService machinePortService;
 
+    @Autowired private BattleLogMapper battleLogMapper;
+
+    private String machineIp = Config.getString("player.local.net");
+
     @PostConstruct public void init() {
-        machinePortService.registerMachine(Config.getString("player.local.net"));
+
+        machinePortService.registerMachine(machineIp);
     }
 
-    @PostMapping("/result") @ResponseBody public Object receiveGameResult() {
+    @PostMapping("/result") @ResponseBody
+    public Object receiveGameResult(@RequestBody String resultJson) {
+        String baseDir = Config.getString("battle_log.upload.path");
+        JSONObject json = JSONObject.parseObject(resultJson);
+        String metaInfo = json.getString("metaInfo");
+        String[] metaInfos = metaInfo.split("\\|");
+        logger.info(String.format("BattleLog received, metaInfo: %s", metaInfo));
+        long timestamp = Long.parseLong(metaInfos[0]);
+        String mapName = metaInfos[1];
+        long aId = Long.parseLong(metaInfos[2]);
+        int aPort = Integer.parseInt(metaInfos[3]);
+        long bId = Long.parseLong(metaInfos[4]);
+        int bPort = Integer.parseInt(metaInfos[5]);
+        machinePortService.recyclePort(machineIp, aPort);
+        machinePortService.recyclePort(machineIp, bPort);
+
+        String battleLogUploadPath = Config.getString("battle_log.upload.path");
+        BattleMap battleMap = mapMapper.findByName(mapName);
+
+        BattleLog battleLog = new BattleLog();
+        battleLog.setId(metaInfo);
+        battleLog.setMapId(battleMap.getId());
+        battleLog.setProjectAId(aId);
+        battleLog.setProjectBId(bId);
+        battleLog.setWinner(json.getInteger("result"));
+        battleLog.setUrl(battleLogUploadPath + "/" + metaInfo);
+
+        battleLogMapper.save(battleLog);
+
         return "1;received";
     }
 
@@ -57,21 +92,25 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
         long timestamp = System.currentTimeMillis();
 
-        scheduleService.uploadProject(hostProject.getId());
-        scheduleService.uploadProject(guestProject.getId());
+        scheduleService.uploadProject(hostProject.getId(), timestamp);
+        scheduleService.uploadProject(guestProject.getId(), timestamp);
 
-        scheduleService.compileProject(hostProject.getId());
-        scheduleService.compileProject(guestProject.getId());
-
-        scheduleService.runProject(hostProject.getId(), timestamp);
-        scheduleService.runProject(guestProject.getId(), timestamp);
+        scheduleService.compileProject(hostProject.getId(), timestamp);
+        scheduleService.compileProject(guestProject.getId(), timestamp);
 
         String playerLocalNet = Config.getString("player.local.net");
 
+        int aPort = machinePortService.takePort(playerLocalNet);
+        int bPort = machinePortService.takePort(playerLocalNet);
+
+        scheduleService.runProject(hostProject.getId(), timestamp, aPort);
+        scheduleService.runProject(guestProject.getId(), timestamp, bPort);
+
+
         String playerAAddress =
-            String.format("%s:%d", playerLocalNet, machinePortService.takePort(playerLocalNet));
+            String.format("%s:%d", playerLocalNet, aPort);
         String playerBAddress =
-            String.format("%s:%d", playerLocalNet, machinePortService.takePort(playerLocalNet));
+            String.format("%s:%d", playerLocalNet, bPort);
 
         JSONObject json = new JSONObject();
         json.put("mapFile", map.getName());

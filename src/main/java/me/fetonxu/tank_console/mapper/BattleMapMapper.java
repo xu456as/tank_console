@@ -18,4 +18,6 @@ public interface BattleMapMapper {
 
     BattleMap findById(Long mapId);
 
+    BattleMap findByName(String mapName);
+
 }

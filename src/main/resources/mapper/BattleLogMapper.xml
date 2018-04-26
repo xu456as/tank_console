@@ -9,13 +9,13 @@
 
 <mapper namespace="me.fetonxu.tank_console.mapper.BattleLogMapper">
     <insert id="save" parameterType="BattleLog">
-        INSERT INTO battle_log(project_b_id, project_b_id,
+        INSERT INTO battle_log(id, project_a_id, project_b_id,
         map_id, winner,
          url, compress,
           date, size)
-          VALUES (#{projectAId}, #{projectBId},
+          VALUES (#{id}, #{projectAId}, #{projectBId},
           #{mapId}, #{winner},
-          #{url}, #{compress},
+          #{url}, #{compressType},
           #{date}, #{size});
     </insert>
     <update id="update" parameterType="Battlelog">
