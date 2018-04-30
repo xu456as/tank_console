@@ -34,4 +34,9 @@ public class FileUtil {
         baseDir = baseDir.endsWith("/") ? baseDir : baseDir + "/";
         return baseDir + name;
     }
+
+    public static String saveFile(String baseDir, String name, File inputFile) throws Exception{
+        BufferedInputStream fis = new BufferedInputStream(new FileInputStream(inputFile));
+        return saveFile(baseDir, name, fis);
+    }
 }

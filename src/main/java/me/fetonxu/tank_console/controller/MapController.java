@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -29,7 +30,7 @@ import java.io.InputStream;
     @Autowired private BattleMapMapper mapMapper;
 
     @PostMapping("/add") @ResponseBody
-    public Object addMap(HttpSession session, @RequestBody byte[] body,
+    public Object addMap(HttpSession session, MultipartFile mapFile,
         @RequestParam("name") String name,
         @RequestParam(value = "winScore", defaultValue = "0", required = false) Integer winScore,
         @RequestParam(value = "loseScore", defaultValue = "0", required = false)
@@ -45,7 +46,7 @@ import java.io.InputStream;
         long timestamp = System.currentTimeMillis();
         String baseDir = Config.getString("map.upload.path");
         try {
-            String dest = FileUtil.saveFile(baseDir, name, body);
+            String dest = FileUtil.saveFile(baseDir, name, mapFile.getBytes());
             BattleMap map = new BattleMap();
             map.setUser(user);
             map.setName(name);

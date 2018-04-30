@@ -39,10 +39,11 @@ public class UserController {
     @PostMapping("login")
     @ResponseBody
     public Object logIn(HttpSession session, @RequestBody String userJson){
+        System.out.println(userJson);
         User user = JSONObject.parseObject(userJson, User.class);
         JSONObject json = new JSONObject();
         User userBack = userService.findUser(user.getEmail());
-        if(user.getPassword().equals(userBack.getPassword())){
+        if(userBack != null && user.getPassword().equals(userBack.getPassword())){
             session.setAttribute("currentUser", userBack);
             json.put("code",  "1");
             json.put("result",  "Login Successfully!");
@@ -52,6 +53,12 @@ public class UserController {
             json.put("result",  "Password not match the account");
         }
         return json;
+    }
+
+    @PostMapping("/queryCurrent")
+    @ResponseBody
+    public Object queryCurrent(HttpSession session){
+        return session.getAttribute("currentUser");
     }
 
     @PostMapping("logout")

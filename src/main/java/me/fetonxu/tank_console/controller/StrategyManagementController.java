@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import java.io.File;
@@ -28,7 +29,7 @@ import java.util.List;
         @RequestParam("compressType") String compressType,
         @RequestParam("language") String language,
         @RequestParam(value = "random", defaultValue = "0", required = false) Integer random,
-        @RequestBody byte[] body) {
+        MultipartFile projectFile) {
         User user = (User) session.getAttribute("currentUser");
         if (user == null) {
             return JsonUtil.createJson("0", "Invalid behavior");
@@ -41,7 +42,7 @@ import java.util.List;
         }
         String code = "0", result = "default";
         try {
-            String url = FileUtil.saveFile(baseDir, name, body);
+            String url = FileUtil.saveFile(baseDir, name, projectFile.getBytes());
             PlayerProject project = new PlayerProject();
             project.setUrl(url);
             project.setUser(user);
@@ -49,7 +50,7 @@ import java.util.List;
             project.setLanguage(language);
             project.setCompressType(compressType);
             project.setRandom(random);
-            project.setSize(Float.valueOf(body.length));
+            project.setSize(Float.valueOf(projectFile.getBytes().length));
             managementService.save(project);
             code = "1";
             result = "Project uploaded successfully";
@@ -66,25 +67,25 @@ import java.util.List;
         @RequestParam("compressType") String compressType,
         @RequestParam(value = "language", required = false) String language,
         @RequestParam(value = "random", required = false) Integer random,
-        @RequestBody(required = false) byte[] body) {
+        @RequestPart(required = false) MultipartFile projectFile) {
 
         PlayerProject project = managementService.getProjectById(projectId);
         User user = (User) session.getAttribute("currentUser");
         if (user == null || !user.getId().equals(project.getUser().getId())) {
             return JsonUtil.createJson("0", "Invalid behavior");
         }
-        if(compressType == null && language == null && random == null && body == null){
+        if(compressType == null && language == null && random == null && projectFile == null){
             return JsonUtil.createJson("0", "Nothing to change");
         }
         String baseDir = Config.getString("project.upload.path");
         baseDir = String.format("%s/%d", baseDir, user.getId());
         String code = "0", result = "default";
         try {
-            FileUtil.saveFile(baseDir, project.getName(), body);
+            FileUtil.saveFile(baseDir, project.getName(), projectFile.getBytes());
             project.setLanguage(language);
             project.setRandom(random);
             project.setCompressType(compressType);
-            project.setSize(Float.valueOf(body.length));
+            project.setSize(Float.valueOf(projectFile.getBytes().length));
             managementService.editProject(project);
             code = "1";
             result = "Project edited successfully";
