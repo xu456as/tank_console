@@ -16,7 +16,15 @@
             <if test="url != null">url=#{url},</if>
             <if test="date != null">date=#{date},</if>
             <if test="winScore != null">win_score=#{winScore},</if>
-            <if test="loseScore != null">lose_score=#{loseScore}</if>
+            <if test="loseScore != null">lose_score=#{loseScore},</if>
+            <if test="numberOfTank != null">no_tank=#{numberOfTank},</if>
+            <if test="tankSpeed != null">tank_speed=#{tankSpeed},</if>
+            <if test="shellSpeed != null">shell_speed=#{shellSpeed},</if>
+            <if test="tankHp != null">tank_hp=#{tankHp},</if>
+            <if test="tankScore != null">tank_score=#{tankScore},</if>
+            <if test="flagScore != null">flag_score=#{flagScore},</if>
+            <if test="maxRound != null">max_round=#{maxRound},</if>
+            <if test="roundTimeout != null">round_timeout=#{roundTimeout}</if>
         </set>
         WHERE id = #{id};
     </update>
