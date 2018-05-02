@@ -25,6 +25,7 @@ import java.util.List;
     @Autowired private StrategyManagementService managementService;
 
     @PostMapping("/upload")
+    @ResponseBody
     public Object upload(HttpSession session, @RequestParam("name") String name,
         @RequestParam("compressType") String compressType,
         @RequestParam("language") String language,
