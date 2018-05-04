@@ -58,7 +58,7 @@ import java.util.concurrent.Future;
         String baseDir = Config.getString("battle_log.upload.path");
         JSONObject json = JSONObject.parseObject(resultJson);
         String metaInfo = json.getString("metaInfo");
-        String[] metaInfos = metaInfo.split("\\|");
+        String[] metaInfos = metaInfo.split("\\.");
         logger.info(String.format("BattleLog received, metaInfo: %s", metaInfo));
         long timestamp = Long.parseLong(metaInfos[0]);
         String mapName = metaInfos[1];
