@@ -99,7 +99,7 @@ import java.util.List;
     }
 
     @PostMapping("/delete") @ResponseBody
-    public Object delete(HttpSession session, Long projectId) {
+    public Object delete(HttpSession session, @RequestParam("projectId") Long projectId) {
         PlayerProject project = managementService.getProjectById(projectId);
         User user = (User) session.getAttribute("currentUser");
         if (user == null || !user.getId().equals(project.getUser().getId())) {

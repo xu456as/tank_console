@@ -22,6 +22,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpSession;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 
 @Controller @RequestMapping("/schedule") public class ScheduleController {
@@ -42,6 +46,8 @@ import javax.servlet.http.HttpSession;
 
     private String machineIp = Config.getString("player.local.net");
 
+    private ExecutorService threadpool = Executors.newFixedThreadPool(2);
+
     @PostConstruct public void init() {
 
         machinePortService.registerMachine(machineIp);
@@ -60,8 +66,29 @@ import javax.servlet.http.HttpSession;
         int aPort = Integer.parseInt(metaInfos[3]);
         long bId = Long.parseLong(metaInfos[4]);
         int bPort = Integer.parseInt(metaInfos[5]);
-        machinePortService.recyclePort(machineIp, aPort);
-        machinePortService.recyclePort(machineIp, bPort);
+
+        int reclaimCnt = 0;
+
+        Future<Integer> aResult = threadpool.submit(new Callable<Integer>() {
+
+            @Override public Integer call() throws Exception {
+                return scheduleService.stopProject(aPort).charAt(0) - '0';
+            }
+        });
+        Future<Integer> bResult = threadpool.submit(new Callable<Integer>() {
+
+            @Override public Integer call() throws Exception {
+                return scheduleService.stopProject(bPort).charAt(0) - '0';
+            }
+        });
+        try {
+            if (aResult.get() == 1 && bResult.get() == 1) {
+                machinePortService.recyclePort(machineIp, aPort);
+                machinePortService.recyclePort(machineIp, bPort);
+            }
+        }catch (Exception e){
+            logger.error(String.format("error: %s", e));
+        }
 
         String battleLogUploadPath = Config.getString("battle_log.upload.path");
         BattleMap battleMap = mapMapper.findByName(mapName);

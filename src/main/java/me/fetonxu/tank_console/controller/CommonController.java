@@ -28,6 +28,7 @@ public class CommonController {
         headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getFilename()));
         headers.add("Pragma", "no-cache");
         headers.add("Expires", "0");
+        headers.add("File-Name", file.getFilename());
 
 
         ResponseEntity entity = null;
