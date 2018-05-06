@@ -10,10 +10,12 @@
 <mapper namespace="me.fetonxu.tank_console.mapper.BattleLogMapper">
     <insert id="save" parameterType="BattleLog">
         INSERT INTO battle_log(id, project_a_id, project_b_id,
+        a_score, b_score,
         map_id, winner,
          url, compress,
           date, size)
           VALUES (#{id}, #{projectAId}, #{projectBId},
+          #{aScore}, #{bScore},
           #{mapId}, #{winner},
           #{url}, #{compressType},
           #{date}, #{size});
@@ -47,6 +49,8 @@
         <id property="id" column="id"/>
         <result property="projectAId" column="project_a_id"/>
         <result property="projectBId" column="project_b_id"/>
+        <result property="aScore" column="a_score"/>
+        <result property="bScore" column="b_score"/>
         <result property="mapId" column="map_id"/>
         <result property="winner" column="winner"/>
         <result property="url" column="url"/>

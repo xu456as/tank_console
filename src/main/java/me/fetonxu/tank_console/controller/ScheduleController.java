@@ -59,6 +59,7 @@ import java.util.concurrent.Future;
         JSONObject json = JSONObject.parseObject(resultJson);
         String metaInfo = json.getString("metaInfo");
         String[] metaInfos = metaInfo.split("\\.");
+        String state = json.getString("state");
         logger.info(String.format("BattleLog received, metaInfo: %s", metaInfo));
         long timestamp = Long.parseLong(metaInfos[0]);
         String mapName = metaInfos[1];
@@ -66,6 +67,10 @@ import java.util.concurrent.Future;
         int aPort = Integer.parseInt(metaInfos[3]);
         long bId = Long.parseLong(metaInfos[4]);
         int bPort = Integer.parseInt(metaInfos[5]);
+
+        String[] states = state.split(",");
+        int aScore = Integer.parseInt(states[0].split("\\:")[2].trim());
+        int bScore = Integer.parseInt(states[1].split("\\:")[2].trim());
 
         int reclaimCnt = 0;
 
@@ -98,6 +103,8 @@ import java.util.concurrent.Future;
         battleLog.setMapId(battleMap.getId());
         battleLog.setProjectAId(aId);
         battleLog.setProjectBId(bId);
+        battleLog.setAScore(aScore);
+        battleLog.setBScore(bScore);
         battleLog.setWinner(json.getInteger("result"));
         battleLog.setUrl(battleLogUploadPath + "/" + metaInfo);
 

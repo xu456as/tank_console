@@ -105,6 +105,8 @@ CREATE TABLE battle_log
 #     FOREIGN KEY (project_b_id) REFERENCES project(id),
 #     FOREIGN KEY (map_id) REFERENCES  map(id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE battle_log ADD COLUMN a_score INT DEFAULT 0;
+ALTER TABLE battle_log ADD COLUMN b_score INT DEFAULT 0;
 
 DROP TABLE IF EXISTS like_log;
 CREATE TABLE like_log

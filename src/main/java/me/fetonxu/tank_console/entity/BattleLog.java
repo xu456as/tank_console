@@ -17,6 +17,8 @@ public class BattleLog {
     private String id;
     private Long projectAId;
     private Long projectBId;
+    private Integer aScore = 0;
+    private Integer bScore = 0;
     private Long mapId;
     private Integer winner = 0;
     private String url;
