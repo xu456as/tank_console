@@ -3,6 +3,7 @@
 
 .DS_Store
 logs/
+lib/
 
 ### STS ###
 .apt_generated
