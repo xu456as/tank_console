@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 PROJECT_DIR=$(cd `dirname $0`;pwd)
-MAIN_CLASS=me.fetonxu.ServerMain
+MAIN_CLASS=me.fetonxu.tank_console.ServerMain
 CLASS_PATH="${PROJECT_DIR}/target/classes/:${PROJECT_DIR}/target/lib/*"
 java -server -classpath $CLASS_PATH $MAIN_CLASS
